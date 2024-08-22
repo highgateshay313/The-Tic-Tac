@@ -13,8 +13,23 @@
    justify-content: center;
    background: rgb(192, 192, 192);
    color: white;
-   background: url(images/abstract-1846962_1920.jpg);
+   background: url(images/abstract-6704211_1920.jpg);
 }
+
+.global-title {
+    grid-column: 2 / 3;
+    background: rgb(42, 85, 128);
+    height: 50px;
+    margin: 0 050px;
+    align-content: center;
+    border-radius: 20px;
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+}
+
+
 
 
 .game-container h2 {
