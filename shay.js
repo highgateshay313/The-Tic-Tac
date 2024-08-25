@@ -1,7 +1,8 @@
 
 const item1 = document.getElementById("item1");
 const item2 = document.getElementById("item2");
-
+const player1Btn = document.querySelector("#pName1");
+const addName = document.querySelector(".btn");
 
 
 
@@ -23,6 +24,19 @@ item2.addEventListener("click", () => {
     item2.textContent = para2.innerText;
     item2.style.color = "white";
     item2.style.fontSize = "2rem"
+})
+
+player1Btn.addEventListener("click", () => {
+    const nameForm = document.querySelector(".nameForm");
+    nameForm.style.zIndex = "2";
+})
+
+addName.addEventListener("click", (e) => {
+    let nameValue = document.getElementById("player1Name");
+    let test = nameValue.value;
+    let test2 = document.querySelector("#pName1");
+    test2.textContent = test;
+    addName.style.zIndex = "-2";
 })
 
 //Object for the gameboard
