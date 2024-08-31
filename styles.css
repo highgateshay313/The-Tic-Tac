@@ -4,6 +4,7 @@
 }
 
 
+
 .game-container {
     display: grid;
    width: 100%;
@@ -29,8 +30,13 @@ h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
 }
 
+
+
 #pName1, #pName2 {
+    display: flex;
     height: 50px;
+    justify-content: center;
+    align-items: center;
     color: white;
     background: rgb(88, 90, 92);
     border: none;
@@ -177,11 +183,23 @@ h2 {
     display: grid;
     height: 100px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25px 1fr 1fr;
+    grid-template-rows: 25px 1fr 1fr 1fr;
     background-color: rgb(28, 96, 169);
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    z-index: -2;
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.p1markerLable {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    text-align: center;
+}
+
+.close-form1 {
+    width: 100%;
+    justify-content: center;
+    grid-column: 1 / 2;
+    grid-row: 4;
 }
 
 #label1 {
@@ -233,11 +251,49 @@ h2 {
     display: grid;
     height: 100px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25px 1fr 1fr;
+    grid-template-rows: 25px 1fr 1fr 1fr;
     background-color: rgb(43, 148, 209);
+    grid-column: 3 / 4;
+    grid-row: 1;
+}
+
+.p2markerLable {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    text-align: center;
+}
+
+.close-form2 {
+    grid-column: 3 / 4;
+    grid-row: 4;
+}
+
+#size-12 {
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    z-index: -3;
+    grid-row: 3;
+    width: 50px;
+    height: 40px;
+}
+
+#size-14 {
+    grid-column: 2 / 3;
+    grid-row: 3;
+    width: 50px;
+    height: 40px;
+}
+
+#size-16 {
+    grid-column: 2 / 3;
+    grid-row: 3;
+    width: 50px;
+    height: 40px;
+}
+
+#size-24 {
+    grid-column: 2 / 3;
+    grid-row: 3;
+    width: 50px;
+    height: 40px;
 }
 
 

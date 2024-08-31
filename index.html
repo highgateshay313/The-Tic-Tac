@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    
     <div class="game-container">
+
         <div class="global-title">
         <h2>Tic Tac Toe Game</h2>
     </div>
@@ -15,19 +17,24 @@
     <form class="nameForm">
         <label for="player1Name" id="label1">Player 1 Name</label>
         <input type="text" id="player1Name">
+        <label class="p1markerLable" for="p1x">Player 1 choose marker</label>
+        <button id="p1x" class="close-form1">X</button>
+        <button id="p2O" class="omarker">O</button>
      </form>
    
     <form class="nameForm2">
         <label for="player2Name" id="label2">Player 2 Name</label>
         <input type="text" id="player2Name">
-       
+        <label class="p2markerLable" id="p2x" for="p2x">Player 2 choose marker</label>
+        <button id="p2x" class="close-form1">X</button>
+        <button id="p2x" class="xmarker">O</button>
     </form>
 
         <div class="game-content">
            
             <div class="game-box">
-                <button id="pName1">Player 1 Name</button>
-                <button id="pName2">Player 2 Name</button>
+                <div id="pName1">Player 1</div>
+                <div id="pName2">Player 2</div>
                 <div id="round-count">Round 1</div>
                 <div class="selection-box">
                 <div class="action-box" id="item1">item 1</div>
@@ -44,11 +51,11 @@
                 <h3 id="player2">Player 2</h3>
                 <h3 id="player1-score">Score:</h3>
                 <h3 id="player2-score">Score:</h3>
-
             </div>
-        </div>
-      
-    </div>
+           
+          </div>
+            </div>
+
 
     <script src="shay.js"></script>
 </body>
