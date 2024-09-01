@@ -15,6 +15,7 @@
    background: rgb(192, 192, 192);
    color: white;
    background: url(images/abstract-6704211_1920.jpg);
+   gap: 20px;
 }
 
 .global-title {
@@ -179,6 +180,7 @@ h2 {
     text-align: center;
 }
 
+/* Section for player 1 marker choice */
 .nameForm {
     display: grid;
     height: 100px;
@@ -187,19 +189,84 @@ h2 {
     background-color: rgb(28, 96, 169);
     grid-column: 1 / 2;
     grid-row: 1;
+    margin-top: 50px;
 }
 
-.p1markerLable {
-    grid-column: 1 / span 2;
-    grid-row: 3;
+.markerDiv1 {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 50px 50px;
+    height: 200px;
+    width: 100%;
+    grid-column: 1 / 3;
+    grid-row: 2;
     text-align: center;
+   
+}
+
+.markerDiv1 p {
+    background-color: rgb(95, 96, 96);
+    grid-column: 1 / span 2;
+    align-content: center;
 }
 
 .close-form1 {
     width: 100%;
     justify-content: center;
     grid-column: 1 / 2;
-    grid-row: 4;
+    grid-row: 2;
+    border: none;
+    background-color: rgb(51, 113, 220);;
+}
+
+.omarker {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    background-color: rgb(127, 198, 226);
+    border: none;
+}
+
+/* Section for player 2 marker choice */
+.nameForm2 {
+    display: grid;
+    height: 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25px 1fr 1fr 1fr;
+    background-color: rgb(43, 148, 209);
+    grid-column: 3 / 4;
+    grid-row: 1;
+    margin-top: 50px;
+}
+
+.close-form2 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: rgb(51, 113, 220);
+    border: none;
+}
+
+.omarker2 {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    background-color: rgb(127, 198, 226);
+    border: none;
+}
+
+.markerDiv2 {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 50px 50px;
+    height: 200px;
+    width: 100%;
+    grid-column: 3 / 4;
+    grid-row: 2;
+    text-align: center;
+}
+
+.markerDiv2 p {
+    background-color: rgb(95, 96, 96);
+    grid-column: 1 / span 2;
+    align-content: center;
 }
 
 #label1 {
@@ -237,35 +304,6 @@ h2 {
     margin: 15px 40px;
     background-color: rgb(106, 106, 106);
     color: white;
-}
-
-.btn {
-    width: 100%;
-    grid-column: 1 / 3;
-    grid-row: 3 / 4 ;
-    height: 25px;
-    cursor: pointer;
-}
-
-.nameForm2 {
-    display: grid;
-    height: 100px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25px 1fr 1fr 1fr;
-    background-color: rgb(43, 148, 209);
-    grid-column: 3 / 4;
-    grid-row: 1;
-}
-
-.p2markerLable {
-    grid-column: 1 / span 2;
-    grid-row: 3;
-    text-align: center;
-}
-
-.close-form2 {
-    grid-column: 3 / 4;
-    grid-row: 4;
 }
 
 #size-12 {
