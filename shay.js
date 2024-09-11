@@ -1,6 +1,6 @@
 
 let currentPlayer = "X";
-let runtime = false;
+let runtime = true;
 
 
 
@@ -28,17 +28,19 @@ const winConditions = [
 ]
 
 //Testing game code
-let options = ["", "", "", "", "", "", "", "", "",];
+let options = ["", "", "", "", "", "", "", "", ""];
 
 const cells = document.querySelectorAll(".action-box");
-const player1 = document.getElementById("player1");
+const gameWinner = document.getElementById("round-count");
 
+startGame()
 
 function startGame() {
     cells.forEach(cell => cell.addEventListener("click", cellClicked))
+    gameWinner.textContent = `${currentPlayer} its their turn`
     runtime = true;
 }
-startGame()
+
 
 function cellClicked() {
     const cellIndex = this.getAttribute("cellIndex");
@@ -47,8 +49,8 @@ function cellClicked() {
     }
 
     updateCell(this, cellIndex);
-    changePlayer()
     checkWinner()
+    
     
 }
 
@@ -58,11 +60,12 @@ function updateCell(cell, index) {
 }
 
 function changePlayer() {
-    currentPlayer = (currentPlayer == "X") ? "O" : "X";
+    currentPlayer = (currentPlayer === "X") ? "O" : "X";
+    gameWinner.textContent = `${currentPlayer} turn!!`
 }
 
 function checkWinner() {
-    let round1 = false;
+    let roundWon = false;
     for (let i = 0; i < winConditions.length; i++) {
         const conditions = winConditions[i]
         const cell1 = options[conditions[0]]
@@ -73,15 +76,22 @@ function checkWinner() {
             continue;
         }
         if (cell1 == cell2 && cell2 == cell3) {
-            round1 = true;
+            roundWon = true;
             break;
         }
     }
 
-    if (round1) {
-        player1.textContent = `${currentPlayer} Wins!!`
+    if (roundWon) {
+        gameWinner.textContent = `${currentPlayer} Wins!!`
         runtime = false;
     }
+    else if(!options.includes("")) {
+        gameWinner.textContent = `It's a Draw!!`;
+        runtime = false;
+    }else {
+        changePlayer();
+    }
+    
 }
 
 
