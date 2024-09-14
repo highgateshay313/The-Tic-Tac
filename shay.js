@@ -8,6 +8,7 @@ let input = document.getElementById("player1Name");
 let input2 = document.getElementById("player2Name")
 let out = document.querySelector("#pName1");
 let out2 = document.querySelector("#pName2");
+let reset = document.getElementById("round-count");
 
 //Testing game code
 let currentPlayer = "X";
@@ -39,6 +40,7 @@ function startGame() {
         }
             updateCell(this, cellIndex);
             checkWinner()
+           
     }
 
     function updateCell(cell, index) {
@@ -97,7 +99,6 @@ function startGame() {
             changePlayer();
         }
     }
-
 };
 
 function chooseName(name, marker) {
@@ -115,6 +116,17 @@ function chooseName(name, marker) {
 };
 chooseName()
 
+reset.addEventListener("click", resetGame)
+
+function resetGame() {
+    currentPlayer = "X";
+    options = ["", "", "", "", "", "", "", "", "",];
+     playersTurn.textContent = `It's ${nickName} turn!!`
+     cells.forEach(cell => cell.textContent = "");
+     winner.textContent = ""
+    runtime = true;
+}
+resetGame()
 
 
 
